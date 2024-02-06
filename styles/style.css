@@ -1,0 +1,83 @@
+.box-container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+    padding: 10px;
+}
+.line1 {
+    width: 100px;
+    height: 3px;
+    background-color: #000;
+    animation-name: line1;
+    animation-duration: 1.5s;
+    animation-play-state: paused;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards ;
+}
+.line2 {
+    width: 100px;
+    height: 3px;
+    background-color: #000;
+    animation-name: line2;
+    animation-duration: 1.5s;
+    animation-play-state: paused;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+.line3 {
+    width: 100px;
+    height: 3px;
+    background-color: #000;
+    animation-name: line3;
+    animation-duration: 1.5s;
+    animation-play-state: paused;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+@keyframes line1{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: translateY(30px) translateX(-10px) rotate(42deg);
+    }
+}
+@keyframes line2{
+    0%{
+        transform: rotate(0deg);
+    }
+    75%{
+
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+
+        transform: translateX(100px);
+    }
+}
+@keyframes line3{
+    0%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform:  translateY(-40px) translateX(-10px) rotate(135deg);
+    }
+}
+
+.box:hover .line1{
+    animation-play-state: running;
+}
+.box:hover .line2{
+    animation-play-state: running;
+}
+.box:hover .line3{
+    animation-play-state: running;
+}
